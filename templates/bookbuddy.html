@@ -1,0 +1,59 @@
+{% load static %}
+<head>
+     <title>BookBuddy</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/bookbuddy.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/preloader.css' %}">
+<body>
+     {% include 'preloader.html' %}
+
+<nav>
+     <div class="logo">
+     <a href='/'><img src="{% static 'logo.webp' %}" alt="Logo"></a>
+     </div>
+     <ul class="nav-links">
+       <li><a href="../youtubeplus">YouTube plus</a></li>
+       <li><a href="../learnit">Learn it</a></li>
+       <li><a href="../accounts/logout">Logout</a></li>
+     </ul>
+</nav>
+    <h2 style="font-size: 50px; padding-top: 80px; text-align: center;"class="title">BookBuddy</h2>
+<div class="form-container"> 
+    <form method="POST" class="post-form" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{form}}
+          <button  type="submit" class="primary-action">Submit</button>
+     </form>
+</div>
+     <br>
+     <div class="container">
+          {% block audio %}
+
+          {% endblock audio %}
+          <hr>
+     </div>
+     <div class="container">
+          {% block summary %}
+          {% endblock summary %}
+
+     </div>
+     <script>
+          // Show the preloader
+          function showPreloader() {
+            document.getElementById('preloader').style.display = 'flex';
+          }
+      
+          // Hide the preloader
+          function hidePreloader() {
+            document.getElementById('preloader').style.display = 'none';
+          }
+      
+          // Add an event listener to show the preloader when a form is submitted
+          document.addEventListener('submit', function(event) {
+            showPreloader();
+          });
+      
+          // Add an event listener to hide the preloader once the page has finished loading
+          window.addEventListener('load', hidePreloader);
+     </script>
+   </body>

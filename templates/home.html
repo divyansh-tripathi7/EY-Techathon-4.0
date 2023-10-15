@@ -1,0 +1,93 @@
+{% load static %}
+{% load icons %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home|eduBOT</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">  
+</head>
+<script src="{% static 'js/home.js'%}"></script>
+</script>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/bookbuddy">Book Buddy</a></li>
+            <li><a href="/youtubeplus">YoutubePlus</a></li>
+            <li><a href="/learnit">Learn it</a></li>
+            <li><a href="accounts/logout">Logout{% icon 'logout' %}</a></li>  
+        </ul>
+    </nav>
+ 
+    <article>
+    <div class="wrapper">
+        <header>
+        </header>
+        <section class="hero">
+            
+            <div class="bgImage fog"></div>
+            
+            <div class="bgImage noise"></div>
+            <div class="container">
+              <div class="content">
+                  <div class="square twitch" style="margin-bottom: 50px;">
+                      <span class="one" ></span>
+                      <span class="two"></span>
+                      <span class="three"></span>
+                      <div class="circle">
+                          <img src="{% static 'logo.webp'%}" alt="">
+                          <h2 class="page1title"> eduBOT</h2>
+                          <p>One Stop Solution for all learning problems.</p>
+                      </div>
+                  </div>
+                </div>
+  </section>
+  <div class="container">
+    <div class="card" style="width: 23.5rem; margin-right: 40px;">
+        <img class="card-img-top" src="{% static 'Book.webp'%}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text" style="padding-top:8px">Book Buddy is an innovative feature that uses algorithms for natural language processing to convert text or PDF documents into a summary text and an audio file. This feature enables users to easily consume information without reading lengthy texts. The audio format also allows users to learn on-the-go, making it an ideal learning tool for individuals with a busy schedule.</p>
+        </div>
+        <a href="/bookbuddy" class="btn btn-primary" style="background-color: #434344; margin-bottom: -56px;">Book Buddy</a>
+      </div>
+      <div class="card" style="width: 23.5rem;">
+        <img class="card-img-top" src="{% static 'ytplus.webp' %}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text" style="padding-top:8px">YouTube Plus provides video transcripts, timestamps, and a video summary to make it easier to obtain information from videos. This feature allows users to organise and structure their learning of online video content. The timestamps permit users to skip to specific segments of the video, making it easier to locate pertinent information.
+        </p>
+        </div>
+        <a href="/youtubeplus" class="btn btn-primary" style="background-color: #434344; margin-bottom: -86px;">YoutubePlus</a>
+      </div>
+      <div class="card" style="width: 23.5rem; margin-left: 40px;">
+        <img class="card-img-top" src="{% static 'learnit.webp'%}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text" style="padding-top:8px"  >Learn It is a unique feature that provides the user with personalised learning on any topic of their choosing. It employs machine learning algorithms to comprehend the user's learning style and preferences, and then creates a personalised learning path for them. This feature additionally provides users with quizzes, interactive exercises, and other learning materials to aid in information retention.</p>
+        </div>
+        <a href="/learnit" class="btn btn-primary" style="margin-bottom: 10px; background-color: #434344;">Learn it</a>
+      </div>
+  </div>
+
+    </article>
+    </body>
+    <footer style="text-align: center">
+        <p>©2023, <a href="https://github.com/swastkk/eduBOT" target="_blank">Acess : Denied</a> All rights reserved</p> 
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        function showText(toggleText) {
+    toggleText.classList.toggle("active");
+}
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</html>

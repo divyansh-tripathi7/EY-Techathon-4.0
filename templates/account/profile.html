@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ user.username }}'s Profile</h1>
+<p>Full Name: {{ user.first_name }} {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+
+<h2>Bookbuddy</h2>
+{% if books %}
+  <ul>
+  {% for book in books %}
+    <li>{{ book.title }} by {{ book.author }}</li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No books yet.</p>
+{% endif %}
+
+<h2>Youtubeplus</h2>
+{% if videos %}
+  <ul>
+  {% for video in videos %}
+    <li>{{ video.title }} by {{ video.creator }}</li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No videos yet.</p>
+{% endif %}
+
+<h2>Learnit</h2>
+{% if courses %}
+  <ul>
+  {% for course in courses %}
+    <li>{{ course.title }} by {{ course.instructor }}</li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No courses yet.</p>
+{% endif %}
+{% endblock %}

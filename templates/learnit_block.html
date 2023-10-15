@@ -1,0 +1,23 @@
+{% extends "learnit.html" %}
+
+'quiz': quiz,
+'resource': resource,
+'desc': result
+
+{% block urls %}
+<h3 style="text-align:center;">Additional Resources</h3>
+{{ resource|striptags|linebreaksbr }}
+{% endblock urls %}
+
+
+{% block quiz %}
+
+<h3 style="text-align:center;">Some questions to assess your knowledge</h3>
+{{ quiz|striptags|linebreaksbr }}
+{% endblock quiz %}
+
+
+{% block desc %}
+<h3 style="text-align:center;">Description of searched topic</h3>
+{{desc}}
+{% endblock desc %}

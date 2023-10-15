@@ -1,0 +1,15 @@
+{% extends "bookbuddy.html" %}
+
+{% block audio %}
+<h3>Summary in Audio form</h3>
+<audio controls>
+     <source src="/{{file}}" type="audio/mpeg">
+     Your browser does not support the audio element.
+</audio>
+<br>
+{% endblock audio %}
+
+{% block summary %}
+<h3 style="text-align: center;">Short Summary</h3>
+<p>{{output}}</p>
+{% endblock summary %}
