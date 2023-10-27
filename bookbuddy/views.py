@@ -16,7 +16,7 @@ def bookbuddy(request):
             print(len(request.FILES))
             file = request.FILES['file']
             val, text = getText(file, "")
-            print("The summary generation hs started...")
+            print("The summary generation has started...")
             parser = PlaintextParser(text, Tokenizer('english'))
             summarizer_1 = LuhnSummarizer()
             summary_1 = summarizer_1(parser.document, 10)

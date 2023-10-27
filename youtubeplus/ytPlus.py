@@ -6,9 +6,9 @@ from sumy.summarizers.luhn import LuhnSummarizer
 # from sumy.summarizers.lsa import LsaSummarizer as Summarizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
-from gptKaam import *
+from gpt import *
 
-gpt_3 = GPT_3(os.getenv('OPENAI_API_KEY'))
+gpt_3 = GPT_3(os.getenv('API_KEY'))
 
 
 model = whisper.load_model("base")
@@ -32,7 +32,7 @@ url = input("yt url")
 
 audioF, text = urlToText(url)
 
-# print(text)
+
 print("url to text extracted")
 
 # print()

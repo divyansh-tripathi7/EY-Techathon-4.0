@@ -18,13 +18,9 @@ def learnit(request):
         if form.is_valid():
             text = request.POST['text']
             question = request.POST['no_of_question_for_quiz']
-            result = gpt_3.teach(200, text)
-            print(result)
+            result = gpt_3.teach(text=text, words= 400)
             resource = gpt_3.resources2(text)
-            print(resource)
             quiz = gpt_3.QuizMe(text, question)
-            print(quiz)
-            print(type(quiz))
             ctx = {
                 'quiz': quiz,
                 'resource': resource,
